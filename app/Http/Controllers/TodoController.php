@@ -11,6 +11,7 @@ class TodoController extends Controller
 {
     public function index(Request $request) {
         $limit = $request->query('limit') ? (int) $request->query('limit') : 15;
+        return $request;
         $query = Todo::where('user_id', auth()->user()->id)->orderBy('created_at', 'desc')->paginate($limit);
 
         return TodoResource::collection($query);
