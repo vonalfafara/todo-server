@@ -15,7 +15,7 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        User::factory(10)->create();
+        // User::factory(10)->create();
         
         Status::factory()->create([
             'name' => 'Not Started',
@@ -27,6 +27,6 @@ class DatabaseSeeder extends Seeder
             'name' => 'Completed',
         ]);
 
-        Todo::factory(500)->create();
+        // Todo::factory(500)->create();
     }
 }
